@@ -289,8 +289,10 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'android.hardware.graphics.common-V5-ndk.so',
             'android.hardware.graphics.common-V7-ndk.so'
-    ),
-
+        ),
+    'vendor/lib64/libcom.xiaomi.metadatautils.so': blob_fixup()
+        .add_needed('libui.so')
+        .replace_needed('libui.so', 'libui-v34.so'),
     'vendor/lib64/libwfdmmsrc_proprietary.so': blob_fixup()
         .replace_needed(
             'android.media.audio.common.types-V2-ndk.so',
