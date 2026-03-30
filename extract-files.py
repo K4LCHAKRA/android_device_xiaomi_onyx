@@ -300,6 +300,9 @@ blob_fixups: blob_fixups_user_type = {
 
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
+    'system/lib64/libcameraopt_jni.so': blob_fixup()
+        .replace_needed('libcameraopt.so','libcameraopt_vendor.so')
+        .replace_needed('libprocessgroup.so','libprocessgroup_vendor.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
