@@ -123,7 +123,7 @@ BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD  := $(patsubst %,$(RAMDISK_MOD
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(RAMDISK_MODULES_PATH)/modules.blocklist
 
 # miuicamera
--include device/xiaomi/miuicamera-onyx/BoardConfig.mk
+-include device/xiaomi/onyx-miuicamera/BoardConfig.mk
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
