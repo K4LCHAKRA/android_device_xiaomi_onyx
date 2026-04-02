@@ -304,6 +304,11 @@ blob_fixups: blob_fixups_user_type = {
     'system/lib64/libcameraopt_jni.so': blob_fixup()
         .replace_needed('libcameraopt.so','libcameraopt_vendor.so')
         .replace_needed('libprocessgroup.so','libprocessgroup_vendor.so'),
+    (
+    'vendor/lib64/vendor.xiaomi.hardware.camera.injection-service.so',
+    'vendor/lib64/vendor.xiaomi.hardware.camera.injection-client.so',
+    'vendor/lib64/vendor.xiaomi.hardware.camera.injection-V1-ndk.so'): blob_fixup()
+        .replace_needed('android.hardware.camera.device-V1-ndk.so','android.hardware.camera.device-V2-ndk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
