@@ -8,12 +8,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Inherit from onyx device
 $(call inherit-product, device/xiaomi/onyx/device.mk)
 
-PRODUCT_NAME := bliss_onyx
+PRODUCT_NAME := infinity_onyx
 PRODUCT_DEVICE := onyx
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -22,8 +22,13 @@ PRODUCT_MODEL := 25053PC47G
 PRODUCT_SYSTEM_NAME := onyx_global
 PRODUCT_SYSTEM_DEVICE := onyx
 
+# Whether you are compiling being an OFFICIAL Maintainer:
+INFINITY_BUILD_TYPE := UNOFFICIAL
+
+# Maintainer Name
+INFINITY_MAINTAINER := K4LCHAKRA
+
 # Flags
-BLISS_BUILDTYPE := OFFICIAL
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_HAS_UDFPS := true
 

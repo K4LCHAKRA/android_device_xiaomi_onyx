@@ -4,4 +4,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bliss_onyx.mk
+    $(LOCAL_DIR)/infinity_onyx.mk

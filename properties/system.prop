@@ -28,3 +28,12 @@ telephony.lteOnCdmaDevice=1
 
 # WFD
 persist.debug.wfd.enable=1
+
+# Add these as PRODUCT_SYSTEM_PROPERTIES (system.prop), You may use utilities as libinit if configuring for unified devices
+ro.infinity.soc=Snapdragon 8735
+ro.infinity.battery=7550 mAh
+ro.infinity.display=1080 x 2400, 60 Hz
+ro.infinity.camera=50MP + 8MP + 20MP
+
+# Also declare your Device Name with appropirate sepolicy rule(Take libinit in use if Unified)
+ro.product.marketname=POCO F7
